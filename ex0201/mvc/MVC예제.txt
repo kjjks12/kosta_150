@@ -1,0 +1,22 @@
+
+-주요기능
+  1. 저장기능
+
+  2. 모든 정보 검색
+
+  3. 제품번호에 해당하는 전자제품 검색
+
+  4. 제품번호에 해당하는 전자제품 수정
+
+  5. 삭제
+
+  6. 추가
+
+
+  -준비
+
+   View : StartView.java  / EndView.java(결과 보여주기!!)
+   
+   Model : Electronics.java / ElectronicsService.java
+
+   Controller: ElectronicsController.java
