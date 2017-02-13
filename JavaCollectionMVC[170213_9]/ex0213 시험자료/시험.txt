@@ -1,0 +1,8 @@
+ 
+1. C:\Examwork 폴더를 생성한다.
+
+2. 이클립스를 새로 로딩하여 생성된 폴더로 workspace변경한다.
+
+3. JavaCollectionMVC[170213_번호] 프로젝트 생성한다.
+
+4. 
