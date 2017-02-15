@@ -1,0 +1,95 @@
+0.9.7
+	- Changed the GUI: now it uses l2f-common and does not rely on the
+	netbeans' form editor to build the interfaces. This is a major
+	change, which experiments with an inline help system and an
+	automatic GUI construction.
+	- Fixes a bug preventing the skeletons to update correctly when a
+	new project is created or opened.
+	- Adds additional debug information for the wrappers, when
+	launched in debug mode.
+	
+0.9.6
+	- Now the JVM look-up method also takes the installed JDK into
+	account (not only the installed JRE)
+	- Fixed bug #858829 (Windowed Wrapper blocks Explorer)
+	- Fixed bug #909610 (Class chooser not working when "embedded jar"
+	not selected)
+	- Fixed bug #910091 (SingleProcess flag of Windowed wrapper not
+	working)
+	- Fixed bug #854895 (Windowed Wrapper (Debug) does not display
+	debug log)
+	- adds sorting of the registry JVMs from highest version number to
+	lower (thus, most recent JVMs are tried first).
+	- Applied patch #883175 (make jsmooth ant task more verbose).
+	- Implemented feature #895967 (Command Line pass-through).
+	- fixed bug #880441 (Jvm search from PATH environment variable)
+	- fixed bug #880439 (Jvm search from environment variables)
+	
+0.9.5
+	- ! Made the jar embedding optional. Now, one can choose to
+	include or not a jar file in the exe. If the jar is not included,
+	the main class must be in the classpath (obviously).
+	- ! Added home-made ICO loader code, so that JIMI is not required
+	anymore (thus removing a dependency to a closed-source Sun
+	package).
+	- Fixed bugs 811957 and 811959  that prevented the wrappers to
+	launch a bundled jvm
+	- Fixed bug 846974: Build exe over to partitions
+	- Added color reduction for icons using true-color images.
+	- Fixed transparency issue with icon resource set up in the
+	executable.
+	- Set the system look-and-feel as default
+	- Fixed a few typos in the skeleton descriptors
+	- Added version in the title bar of the application window
+	- Improved the documentation (at least, tried to)
+	- Fixed the README file
+	
+0.9.4
+	- ! Added Ant Task support 
+	- ! Added Command Line compiler
+	- ! distribution build now fully automatic
+	- Added small set of testing suit
+	- Changed default xml encoding of the project, due a flaw in the
+	Sun's XMLDecoder classes which prevented it to work with ant (this
+	is a classloader issue).
+	- Added command line launching support
+	- Added automatic dist creation
+	- Fixed corrupt classpath when project file not in the same
+	directory than the executable built.
+	- Fixed a bug corrupting the value part when edition java
+	properties
+	
+0.9.3
+	- Added Java Properties management in JSmoothGen
+	- Added variable management for java properties in wrappers 
+	- Fixed bug: incorrect Sun's jre.exe/java.exe 1.1 classpath
+	- Fixed minor bug: FileUtils::recursiveSearch method scanning
+	files instead of just the directories
+	- Fixed major bug: *.jar files not added to classpath for Sun's
+	JRE 1.1
+	- Fixed bug #801407:Relative directory stuff seems confused by
+	multiple drives
+	- Fixed bug #803979: Windows size/position not retained between
+	sessions
+	- Fixed bug #801411: Classpath area UI details
+	- Fixed bug #801408: manifest defined main-class ignored
+	- Added Class Chooser Dialog in Java Application panel
+	- Added splash screen (displays name and version).
+	- Added maximum memory and initial memory setting support
+	- Written first draft of the user manual
+	- Fixed issue with parameter string ending with a backslash. 
+	
+0.9.2 (5 Sept 2003)
+	- Fixed a bug that prevented jsmoothgen to compile if the JIMI API
+	is not in the path
+
+0.9.1 (03 Sept 2003)
+	- Added the Console Wrapper
+	- Fixed a bug on the Windowed Wrapper (java.exe was called instead of javaw.exe)
+	- Fixed the broken icon generation
+	- Added JIMI library support (optional)
+	- Fixed several minor bugs
+
+0.9 (28 Aug 2003)
+	- First public release
+	- Window Wrapper available
