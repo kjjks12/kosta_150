@@ -16,21 +16,21 @@ import javax.swing.JPanel;
 import javax.swing.JScrollBar;
 import javax.swing.JTextField;
 
-public class RgbCapture extends JFrame {
+public class RgbCapture extends JFrame  {
 
 	/** 패널 생성 */
 	JPanel leftP = new JPanel(new GridLayout(3, 2));
 	JPanel rightP = new JPanel(new GridLayout(3, 1));
-	JPanel downP= new JPanel(new FlowLayout());
+	JPanel downP = new JPanel(new FlowLayout());
 	Canvas canvas = new Canvas();
 
 	/** 변수 */
 	JTextField tfR = new JTextField("0", 3);
 	JTextField tfG = new JTextField("0", 3);
 	JTextField tfB = new JTextField("0", 3);
-	JScrollBar sbR = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 255);
-	JScrollBar sbG = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 255);
-	JScrollBar sbB = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 255);
+	JScrollBar sbR = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 256);
+	JScrollBar sbG = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 256);
+	JScrollBar sbB = new JScrollBar(JScrollBar.HORIZONTAL, 0, 1, 0, 256);
 
 	int r, g, b;
 
@@ -72,31 +72,48 @@ public class RgbCapture extends JFrame {
 
 	}
 
+	/**
+	 * 방법 1 implement 로 구현 리스너에 this로 불러야지!!
+	 * 
+	 */
+	/*
+	 * @Override public void adjustmentValueChanged(AdjustmentEvent e) { // TODO
+	 * Auto-generated method stub
+	 * 
+	 * if (e.getSource() == sbR) { r = e.getValue(); tfR.setBackground(new
+	 * Color(r, 0, 0)); tfR.setText(r + ""); } else if (e.getSource() == sbG) {
+	 * g = e.getValue(); tfG.setBackground(new Color(0, g, 0)); tfG.setText(g +
+	 * ""); } else if (e.getSource() == sbB) { b = e.getValue();
+	 * tfB.setBackground(new Color(0, 0, b)); tfB.setText(b + ""); }
+	 * 
+	 * canvas.setBackground(new Color(r, g, b));
+	 * 
+	 * }
+	 */
+
 	public class CustomListener implements AdjustmentListener {
 
 		@Override
 		public void adjustmentValueChanged(AdjustmentEvent e) {
 			// TODO Auto-generated method stub
-		
+
 			if (e.getSource() == sbR) {
 				r = e.getValue();
+				tfR.setBackground(new Color(r, 0, 0));
 				tfR.setText(r + "");
-				
-
 			} else if (e.getSource() == sbG) {
 				g = e.getValue();
+				tfG.setBackground(new Color(0, g, 0));
 				tfG.setText(g + "");
 			} else if (e.getSource() == sbB) {
 				b = e.getValue();
+				tfB.setBackground(new Color(0, 0, b));
 				tfB.setText(b + "");
 			}
 
-			canvas.setBackground(new Color(r,g,b));
+			canvas.setBackground(new Color(r, g, b));
 
 		}
-
-	
-
 	}
 
 	public static void main(String[] args) {

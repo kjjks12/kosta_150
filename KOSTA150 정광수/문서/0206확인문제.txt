@@ -1,0 +1,13 @@
+1. 1
+2. 2
+3. 1
+4. 4
+5. 자식클래스에서 생성자 호출시 super()가 생략되어있는데  부모클래스인 Parent에는 디폴트 생성자가 없다
+   따라서 super(name)으로 강제로 매개변수 하나를 받는 생성자나, Parent클래스에 디폴트 생성자를 생성한다.
+6.Parent(String nation) call
+  Parent()call
+  Child(String name) call
+  Child()call
+7.스노우 타이어가 굴러갑니다
+  스노우 타이어가 굴러갑니다.
+8.2
