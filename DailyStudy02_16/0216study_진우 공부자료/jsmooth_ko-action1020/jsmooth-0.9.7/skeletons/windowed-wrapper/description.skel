@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jsmoothskeleton>
+<debug>false</debug>
+<description><![CDATA[
+ÀÌ skeletonÀº <b>GUI ¾îÇÃ¸®ÄÉÀÌ¼Ç</b>¿¡ »ç¿ëµË´Ï´Ù.
+<ul>
+<li>ÄÜ¼Ö I/O°¡ Ç¥½ÃµÇÁö ¾Ê½À´Ï´Ù.
+<li>ÀÚ¹Ù VMÀÌ ¹ß°ßµÇÁö ¾Ê¾ÒÀ» °æ¿ì, ´Ù¿î·ÎµåÇÒ URLÀ» Ç¥½ÃÇØÁÙ ¼ö ÀÖ½À´Ï´Ù. (ÀÚ¹Ù ´Ù¿î·Îµå ÆäÀÌÁö·Î)
+</ul>
+ÀÎÀÚµéÀÌ ¾îÇÃ¸®ÄÉÀÌ¼ÇÀ¸·Î ³Ñ°ÜÁú ¼ö ÀÖ½À´Ï´Ù (JSmooth ±âº» ÀÎÀÚ ¸ÞÄ¿´ÏÁòÀ» »ç¿ëÇÏ°Å³ª ÀÎÀÚ¸¦ Æ÷ÇÔÇÑ ¹Ù·Î°¡±â¸¦ ¸¸µé´õ¶óµµ)]]>
+</description>
+<executableName>jwrap.exe</executableName>
+<resourceCategory>JAVA</resourceCategory>
+<resourceJarId>102</resourceJarId>
+<resourcePropsId>103</resourcePropsId>
+<shortName>Windowed Wrapper</shortName>
+<skeletonProperties>
+<description>¼³Ä¡µÉ ÄÄÇ»ÅÍ¿¡¼­ JVMÀÌ ¹ß°ßµÇÁö ¾ÊÀ» °æ¿ì, ¸Þ½ÃÁö¸¦ »ç¿ëÀÚ¿¡°Ô º¸¿©ÁÙ ¼ö ÀÖ½À´Ï´Ù. ±× ÈÄ ±âº» ºê¶ó¿ìÀú°¡ ½ÇÇàµÇ¾î ¿©±â¼­ ÁöÁ¤ÇÑ URLÀ» º¸¿©ÁÝ´Ï´Ù.</description>
+<idName>Message</idName>
+<label>Message</label>
+<type>textarea</type>
+<value>ÀÌ ÄÄÇ»ÅÍ¿¡¼­ ÀÚ¹Ù¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù. ´Ù¿î·Îµå¸¦ ¿øÇÏ½Ê´Ï±î?</value>
+</skeletonProperties>
+<skeletonProperties>
+<description>»ç¿ëÀÚ°¡ '¿¹'¸¦ ¼±ÅÃÇÒ °æ¿ì, ±âº» ºê¶ó¿ìÀú°¡ ÀÌ URLÀ» º¸¿©ÁÙ °ÍÀÔ´Ï´Ù.</description>
+<idName>URL</idName>
+<label>URL</label>
+<type>string</type>
+<value>http://www.java.com</value>
+</skeletonProperties>
+<skeletonProperties>
+<description>±âº»À¸·Î ÀÚ¹Ù ¾îÇÃ¸®ÄÉÀÌ¼ÇÀº wrapper¿Í ´Ù¸¥ ÇÁ·Î¼¼½º¿¡¼­ ½ÇÇàÀÌ µË´Ï´Ù. ÀÚ¹Ù ¾îÇÃ¸®ÄÉÀÌ¼ÇÀÌ wrapper¿Í °°Àº ÇÁ·Î¼¼½º¿¡¼­ ½ÇÇàµÇ±æ ¿öÇÏ½Ç °æ¿ì ÀÌ ¿É¼ÇÀ» ¼±ÅÃÇÏ¼¼¿ä</description>
+<idName>SingleProcess</idName>
+<label>Launch java app in the exe process</label>
+<type>boolean</type>
+<value>0</value>
+</skeletonProperties>
+<skeletonProperties>
+<description>jsmooth debug ÄÜ¼Ö È°¼ºÈ­</description>
+<idName>Debug</idName>
+<label>Debug console</label>
+<type>boolean</type>
+<value>0</value>
+</skeletonProperties>
+</jsmoothskeleton>
