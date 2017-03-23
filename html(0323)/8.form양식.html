@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+
+  <title>폼 양식 만들기</title>
+ </head>
+ <body>
+		<!-- readonly : submit 했을때 값 전송된다
+			 disabled : submit 했을때 값 전송도 안된다
+			
+			 required : 필수 요소를 지정 하는거 안쓰고 전송하면 전송이 되지 않는데여
+			 placeholder: 힌트
+			-->
+
+
+		<!--  get 방식:주소에서 넘겨지구 있어
+						http://www.naver.com/?name=&password=&hobby=4&gender=%EC%97%AC&x=71&y=45
+			  post 방식 :body bdoy 사이 영역에서 넘어갔어
+		-->
+
+
+
+	<form name="ex" action ="http://www.naver.com" method ="get">
+		이름:&nbsp<input type="text"  name="name" size="10" maxlength="5"   required placeholder="이름 입력"  ><p>
+		비밀번호:&nbsp <input type="password" name="password" size="10"><br>
+		
+
+
+		<!--체크박스의 name 속성의 이름은 같아도 달라도 상관이 없지만
+			같은이름으로 많이 사용한다.(단 values는 모두 다르게 ...)
+			이름이 같으면 배열로 사용 가능 !!
+			단 value 값은 다르게 !!
+		-->	
+
+		<fieldset>
+		<legend>취미선택 </legend>
+			<input type="checkbox" name="hobby" value="1">등산
+			<input type="checkbox" name="hobby" value="2">낚시
+			<input type="checkbox" name="hobby" value="3">수영
+			<input type="checkbox" name="hobby" value="4" checked>놀기
+			<input type="checkbox" name="hobby" value="5">더놀기
+		</fieldset>
+
+
+		<fieldset>
+		<legend>성별</legend>
+			<input type="radio" name="gender" value="남">남자
+			<input type="radio" name="gender" value="여" checked>여자
+		</fieldset>
+		
+		<!--초기값 value로 못 줘요 -->
+		<p>
+		<textarea rows="10" cols="20" name="content">오늘도 다갔다.
+		</textarea>
+
+
+		<p>
+		<select name="job" size="3" multiple >
+			<option value="0">-----선택-----</option>
+			<option value="1">프로그래머</option>
+			<option value="2">강사</option>
+			<option value="3">회사원</option>
+			<option value="4">백수</option>
+		</select>
+		
+
+		<p>
+		<input type="button" value="눌러봐 "><p>
+		<input type="file" value="전송"><p>
+
+		<!--눈에 보여지지 않지만 내부적으로 숨겨서 넘겨 줘야 할때 -->
+		<input type="hidden" name="id" value="jang">
+		<input type="hidden" name="etc" value="안녕">
+
+		<p>
+		<!--html5에 추가된 속성 -->
+		<input type="date" name="today"><p>
+		<input type="email" name="email"><p>
+		<input type="number" name="number"><p>
+		<input type="color" name="color"><p>
+
+
+		<!-- type="button" | submit | reset " 기본 : submit-->
+		<button type="button">클릭해봐</button>
+
+		<p>
+		<input type="reset" value="취소"> 취소
+		<input type="submit" value="전송">전송
+		<input type="image" src="img/suzi.png" width="50" height="50">
+
+	</form>
+ </body>
+</html>
