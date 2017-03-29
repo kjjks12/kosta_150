@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <script>
+ document.write("<h3>문자열 관련 함수 </h3>");
+ var str="Jeong gwang su";
+ document.write("str="+str+"<br>");
+ document.write("str.length="+str.length+"<br>");
+//1.ChartAt(index):index에 해당하는 문자 추출.
+document.write("str.charAt(0) ="+str.charAt(0)+"<br>");
+document.write("str.charAt(5) ="+str.charAt(4)+"<br>");
+document.write("str.charAt(15) ="+str.charAt(15)+"<br>");
+
+/*
+2. indexOf("문자열");--왼쪽부터 찾기
+   lastIndexOf("문자열");-- 오른쪽 부터 찾기
+   =>찾는 문자열이 없으면 -1
+*/
+document.write("str.lastIndexOf()="+str.lastIndexOf('s')+"<br>");
+document.write("str.lastIndexOf()="+str.lastIndexOf('gwan')+"<br>");
+document.write("str.indexOf() ="+str.indexOf('j')+"<br>");
+
+
+/*
+3.문자열 추출
+slice(index1,index2)
+substring(index1,index2)
+substr(index1,length);
+*/
+document.write("<hr>");
+document.write("str.slice()="+str.slice(0,3)+"<br>");
+document.write("str.slice()="+str.slice(2,3)+"<br>");
+document.write("str.slice()="+str.slice(5)+"<br>");
+document.write("<hr>");
+document.write("str.substring()="+str.substring(0,3)+"<br>");
+document.write("str.substring()="+str.substring(2,3)+"<br>");
+document.write("str.substring()="+str.substring(5)+"<br>");
+document.write("<hr>");
+document.write("str.substr() ="+str.substr(0,3)+"<br>");
+document.write("str.substr() ="+str.substr(2,3)+"<br>");
+document.write("str.substr() ="+str.substr(5)+"<br>");
+document.write("<hr>");
+
+/*4.split("구분자")=>구분자를 기준으로 문자열 분리 */
+document.write("str.split() ="+str.split(' ')+"<br>");
+document.write("str.split() ="+str.split('g')+"<br>");
+//document.write("str.split() ="+str.split(5)+"<br>");
+document.write("<hr>");
+
+str="수영/낚시/등산/놀기/먹기";
+var result=str.split("/");
+for(i=0; i<result.length;i++){
+	document.write("<input type='checkbox' name='hobby' value='"+result[i]+"'>"+result[i]);
+
+}
+
+
+ </script>
+ </head>
+ <body>
+	
+  
+ </body>
+</html>

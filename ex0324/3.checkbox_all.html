@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+   <script>
+	   function allCheck(th,f){
+			//전체선택이 선택되어 있으면 hooby를 모두 선택하게 한다.
+			//아니면 hobby를 모두 해지시킨다.
+	
+				for(i=0;i<f.hobby.length;i++){
+				f.hobby[i].checked=th.checked;
+				}
+
+				if(th.checked){
+				document.getElementById('span').innerText="전체해제";
+				}
+				else{
+				document.getElementById('span').innerText="전체선택";
+				}
+		
+		}//allCheck()메서드 끝
+
+		function hobbyCheck(f){
+			//선택된 취미의 value값 가져오기.
+			var str="취미는 :";
+			for(i=0;i<f.hobby.length;i++){
+				if(f.hobby[i].checked==true){
+				 str+=f.hobby[i].value+","
+				}
+			}
+			alert(str);
+		}//hobbyCheck()메서드 끝
+	</script>
+ </head>
+ <body>
+ <form>
+   <fieldset>
+      <legend>취미선택</legend>
+	  <input type="checkbox" name="all" value="all" onclick="allCheck(this, form)">
+	   <span id="span">전체선택</span>
+	  <p>
+
+	  <input type="checkbox" name="hobby" value="등산">등산
+      <input type="checkbox" name="hobby" value="수영">수영
+	  <input type="checkbox" name="hobby" value="낚시">낚시
+	  <input type="checkbox" name="hobby" value="놀기">놀기
+	  <input type="checkbox" name="hobby" value="먹기">먹기
+
+	  <input type="button" value="클릭" onclick="hobbyCheck(form)">
+
+   </fieldset>
+ </form>
+  
+ </body>
+</html>

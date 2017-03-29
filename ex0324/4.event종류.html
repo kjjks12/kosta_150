@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <script>
+
+	function jobSel(th){//th는 select박스
+		//선택된 value를 가져오기
+		console.log("선택된 값 :"+th.value);
+		//선택된 번지수 가져오기 1부터 시작이에여
+		console.log("선택된 번지수 :"+th.selectedIndex);
+		//총 항목의 개수 가져오기
+		console.log("총 항목수 :"+th.length);
+	
+		//1부터 시작하는 이유는 0 번지 선택은 안가져올꺼라서
+		var str="";
+		for(i=1;i<th.length;i++){
+			str+=th[i].value+"<br>";
+		}
+		document.getElementById("div").innerHTML=str;
+
+		//동적으로 option을 추가
+		var a=new Option("강사","장희정");//인수(항목,value)<option value='장희정'>강사</option>으로 들어감
+		th.options[th.length]=a;//맨 마지막에 추가
+
+		//동적으로 option을 제거
+		th.options[0]=null;
+
+	}//jobSel(th)메소드 끝
+
+  </script>
+  
+ </head>
+
+ <body>
+
+ <h3 onMouseover="this.style.background='pink'" onMouseout="this.style.background='white'">
+   Event 종류 알아보기
+ </h3>
+ <form name="f">
+    <input type="text" onFocus="this.style.border='3px solid blue'; this.style.background='#80bfff'" onblur="this.style.border='1px solid gray'; this.style.background='white'" /> <p>
+
+	직업 : 
+	 <select name="job" onchange="jobSel(this)">
+       <option value="0">--선택-- </option>
+	   <option value="백수">백수</option>
+	   <option value="백조">백조 </option>
+	   <option value="학생">학생 </option>
+	   <option value="날라리">날라리 </option>
+	 </select>
+
+	<div id="div"> <div>
+</form>
+ </body>
+</html>
