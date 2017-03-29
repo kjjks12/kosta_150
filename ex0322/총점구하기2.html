@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+ <script>
+
+ function calculate(){
+	num1=prompt("첫번째 인수 ","");
+	num2=prompt("두번째 인수 ","");
+	operator=prompt("연산자 ","");
+	result=0;
+
+	switch(operator){
+	case '+':result=parseInt(num1)+parseInt(num2); document.write(result); break;
+	case '-':result=parseInt(num1)-parseInt(num2); document.write(result); break;
+	case '*':result=parseInt(num1)*parseInt(num2); document.write(result); break;
+	case '/':result=parseInt(num1)/parseInt(num2); document.write(result); break;
+	default:
+		re=confirm("다시입력할래?");
+		if(re==true) calculate();
+		else alert("안녕 끝낼게!!");
+	break;
+	}
+ }
+
+ </script>
+
+
+ </head>
+ <body>
+ 
+  <input type="button" value="연산하기" onclick="calculate();">
+
+
+ </body>
+</html>

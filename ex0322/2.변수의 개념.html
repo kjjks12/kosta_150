@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<script>
+		//변수 선언!!(전역변수 , 지역변수)
+		var age=10;//전역변수
+		name="장희정";//전역변수
+		var a;//전역변수
+
+		function test(){
+			//지역 변수
+			var age=20;
+			b=7;//var 키워드가 없으면 전역변수가 된다.
+			var c=50;//
+
+			document.write("<h3>");
+			document.write("age:"+age+"<br>");
+			document.write("this.age:"+this.age+"<br>");
+			document.write("a :"+a+"<br>");
+			document.write("b :"+b+"<br>");
+			document.write("c :"+c+"<hr>");
+			document.write("</h3>");
+			}
+
+		age="졸립다..."
+		function test2(){
+			document.write("<h3>");
+			document.write("age:"+age+"<br>");
+			document.write("this.age:"+this.age+"<br>");
+			document.write("a :"+a+"<br>");
+			document.write("b :"+b+"<br>");
+			document.write("c :"+c+"<br>");
+			//지역변수 이므로 접근 불가
+			document.write("</h3>");
+			}
+
+	//함수호출
+	test();
+	test2();
+
+	</script>
+ 
+ </head>
+ <body>
+  
+ </body>
+</html>

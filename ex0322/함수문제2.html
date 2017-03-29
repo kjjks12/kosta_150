@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+  <title>Document</title>
+<meta charset="UTF-8"> 
+  <script>
+	function namefunc(){
+	var name=prompt("이름을 입력해주세요","");
+	document.write("이름 :"+name+"<br>");
+	 }
+
+	function colorfunction(color){
+	document.bgColor=color;
+	}
+
+	function nameyearfucntion(name,year){
+	document.write("이름 :"+name+"<br>");
+	document.write("나이 :"+2017+parseInt(year)+"<br>");
+	
+	}
+
+	function confrimfunction(){
+	var sex=confirm("남자면 '예' 여자면 '아니요'")
+
+	return sex ? "여자" : "남자"
+	}
+
+	namefunc();
+	nameyearfucntion("김진석",1992);
+	var re= confrimfunction();
+	document.write("성별 결과 : "+re);
+ </script>
+ 
+ </head>
+ <body onload='colorfunction(prompt("색상을 입력하세요!","red"))'>
+  <h1 onclick="colorfunction(prompt('색상을 입력하세요!','red'))">색깔변경하기</h1>
+ </body>
+</html>

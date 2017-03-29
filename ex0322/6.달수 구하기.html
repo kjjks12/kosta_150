@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>달수 구하기</title>
+ 
+ <script>
+	function monthEnd(){
+		month=prompt("달수를 입력해주세요1~12","");
+
+		if(isNaN(month)){
+			alert('숫자만 입력하세요');
+			confrim("다시입력 할래?") ? monthEnd() : alert('끝');
+		}
+		else if(!(parseInt(month)>=1 && parseInt(month)<=12)){
+			alert('달 입력오류');
+			confrim("다시입력 할래?") ? monthEnd() : alert('끝');
+		}
+		
+		switch(parseInt(month)){
+			case 2:
+				document.write(month+"월은"+"28"+"까지 입니다"); break;
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				document.write(month+"월은"+"30"+"까지 입니다");break;
+			default:
+				document.write(month+"월은"+"31"+"까지 입니다"); break;
+		}	
+		
+
+	}
+ </script>
+ 
+ </head>
+ <body onload="monthEnd()">
+  
+ </body>
+</html>

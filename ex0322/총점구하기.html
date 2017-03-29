@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ 
+ <script>
+	name=prompt('이름을 입력하세요','');
+	kor=prompt('국어 성적','');
+	eng=prompt('국어 성적','');
+	math=prompt('국어 성적','');
+	sum=parseInt(kor)+parseInt(eng)+parseInt(math);
+	avg=sum/3;
+
+	var grade="";
+	if(avg>=90)grade="수";
+	else if(avg>=80)grade="우";
+	else if(avg>=70)grade="미";
+	else if(avg>=60)grade="양";
+	else if(avg>=50)grade="가";
+
+	//4개의 prompt를 띄운다
+	//총점, 평균, 등급을 구한다.
+	//출력한다.
+	
+	document.write("<table>");
+	document.write("<tr>");
+	document.write("<th>이름</th>");
+	document.write("<th>국어</th>");
+	document.write("<th>영어</th>");
+	document.write("<th>수학</th>");
+	document.write("<th>총점</th>");
+	document.write("<th>평균</th>");
+	document.write("<th>등급</th>");
+	document.write("</tr>");
+
+	document.write("<tr>");
+
+	document.write("<th>"+name+"</th>");
+	document.write("<th>"+kor+"</th>");
+	document.write("<th>"+eng+"</th>");
+	document.write("<th>"+eng+"</th>");
+	document.write("<th>"+sum+"</th>");
+	document.write("<th>"+avg+"</th>");
+	document.write("<th>"+grade+"</th>");
+
+	document.write("</tr>");
+	document.write("</table>");
+
+ </script>
+
+	<style>
+	table,th{ 
+	font-size:10px
+	border-collapse: collapse;
+	border: 1px solid;
+	color:green;
+	}
+
+	</style>
+
+ </head>
+ <body>
+	<table>
+		<tr>
+		<th>이름</th>
+		<th>국어</th>
+		<th>영어</th>
+		<th>수학</th>
+		<th>총점</th>
+		<th>평균</th>
+		<th>등급</th>
+		</tr>
+
+	<tr>
+		<th><script>document.write(name)</script></th>
+		<th><script>document.write(kor)</script></th>
+		<th><script>document.write(eng)</script></th>
+		<th><script>document.write(math)</script></th>
+		<th><script>document.write(sum)</script></th>
+		<th><script>document.write(avg)</script></th>
+		<th><script>document.write(grade)</script></th>
+		
+		</tr>
+
+	</table>
+	
+
+  
+ </body>
+</html>
