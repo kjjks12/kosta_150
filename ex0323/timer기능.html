@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <script>
+ function funcStart(){
+	curDate= new Date();
+	curHour=curDate.getHours();
+	if(curHour>12){
+	curHour="PM"+"0"+(curHour-12)
+	}
+	else{
+	curHour="AM"+"0"+curHour;
+	}
+	curMinute=curDate.getMinutes();
+	if(curMinute<10){
+	curMinute="0"+curMinute;
+	}
+
+	curSecond=curDate.getSeconds();
+	if(curSecond<10){
+	curSecond="0"+curSecond;
+	}
+
+	window.document.fr.txt.value=curHour+" : "+curMinute+" : "+curSecond;
+	timerId=setTimeout("funcStart()",1000);
+ 
+ }
+
+ function funcStop(){
+ 
+ clearTimeout(timerId);
+ }
+ 
+ </script>
+ </head>
+ <body>
+  
+  <form name="fr">
+  <input type="text" name="txt">
+  <input type="button" name="start" value="시작" onclick="funcStart()">
+  <input type="button" name="stop" value="중지" onclick="funcStop()">  
+  </form>
+
+ </body>
+</html>

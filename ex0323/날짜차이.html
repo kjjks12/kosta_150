@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+ <head>
+ <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+  var today = new Date();
+  
+  function sett(){
+   //today = new Date();
+   window.document.f.ey.value = today.getFullYear();
+   window.document.f.em.value = today.getMonth()+1;
+   window.document.f.ew.value = today.getDate();
+  }
+
+  function cal(){
+   year = window.document.f.y.value;
+   month = window.document.f.m.value;
+   date = window.document.f.w.value;
+   total = new Date(year,month,date);
+
+   year2 = window.document.f.ey.value;
+   month2 = window.document.f.em.value;
+   date2 = window.document.f.ew.value;
+   total2 = new Date(year2,month2,date2);
+
+   result = (((((total2 - total)/1000)/60)/60)/24);
+
+   alert(result+"일 지났다");
+  }
+  </script>
+ </head>
+ <body onload="sett()">
+ <form name="f">
+
+  시작 : <input type="text" id="y">
+  년 <input type="text" id="m">
+  월 <input type="text" id="w">
+  일 ~ <input type="text" id="ey"> 년
+  <input type="text" id="em"> 월
+  <input type="text" id="ew"> 일
+  <input type="button" id="btn" value="계산" onClick="cal()">
+
+  </form>
+ </body>
+</html>

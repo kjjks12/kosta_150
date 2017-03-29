@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <style>
+ 	div{width:600px; height:30px; border: 1px red solid}
+ </style>
+ 
+	<script>
+
+	 var arr= new Array("오늘은 뭐 먹지?","배 엄청고파요 ","어여~ 끝내고..","밥 먹으로 가요 GO GO");
+	var i=0;
+
+	function show(){
+	
+		var divEle=document.getElementById("div");
+		divEle.innerText+=arr[i++];
+		timerId=setTimeout("show()",1000);
+		
+		if(i==arr.length+1){
+		i=0;
+		divEle.innerText="";
+		 clearTimeout(timerId);
+		}
+
+	}
+
+
+	</script>
+ </head>
+ <body>
+	<h1>text박스에 접근하기</h1>
+	
+	<div id="div">
+	</div>
+	<input type="button" value="클릭" onclick="show()">
+
+
+ </body>
+</html>

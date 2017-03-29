@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<style>
+		div{width:400px;height:100px;border:double 5px red}
+		span{background:pink}
+		.a{border:inset 20px orange; font-family:궁서체}
+		#b{text-decoration:underline; background:#9933cc}
+	</style>
+ 
+	<script>
+		function check(index){
+			switch(index){
+			case 1://div영역
+				divEle=document.getElementById("div");
+				//divEle.innerHTML+="<img src='../img/cat.gif'><input type='text'>"
+				//css변경하기 => 대상객체.style.속성=값
+				divEle.style.fontSize="35px";
+				divEle.style.backgroundColor="skyblue";
+				divEle.style.border="dashed 10px #ffcc66";
+				break;
+			case 2://span영역
+				spanEle= document.getElementById("span");
+				spanEle.innerHTML="달력에 시계만들때 이거 사용하세요";
+				spanEle.className="a"//css의 class이름 a를 적용해라;
+				//spanEle.id="b";//css의id b를 적용해라 ->id로 해서 #으로 찾는거는 잘 안쓴데!!!!
+				break;
+			
+			}//스위치 끝
+		
+		}//함수 끝
+
+	</script>
+ </head>
+
+ <body>
+ <form>
+	<input type="button" value="div적용" onClick="check(1)">
+	<input type="button" value="span적용" onClick="check(2)">
+</form>
+	<div id="div">div영역입니다</div>
+	<span id="span">span영역입니다</span>
+
+ </body>
+</html>

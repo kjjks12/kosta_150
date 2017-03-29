@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+	<script>
+	var toDay= new Date();//그냥가져오기
+	//var toDay= new Date(2016,5,20);//2016년 6월 20일
+	//var toDay= new Date(2016,5,20,13,20,40);//2016년 6월 20일 13시 20분 40초
+	document.write("<h3>"+toDay+"<br>");
+	
+	document.write("toDay.getFullYear() ="+toDay.getFullYear()+"<br>");
+	document.write("toDay.getMonth() ="+toDay.getMonth()+"<br>");
+	document.write("toDay.getDate() ="+toDay.getDate()+"<br>");
+	
+	document.write("toDay.getHours() ="+toDay.getHours()+"<br>");
+	document.write("toDay.getMinutes() ="+toDay.getMinutes()+"<br>");
+	document.write("toDay.getSeconds() ="+toDay.getSeconds()+"<br>");
+
+
+	document.write("======요일======<br>");
+	var week= new Array("일요일","월요일","화요일","수요일","목요일","금요일","토요일")
+	document.write("toDay.getDay() ="+toDay.getDay()+"<br>");//일요일 0 부터 시작
+	document.write("요일 배열로 이용="+week[toDay.getDay()]+"<br>");
+
+
+	//날짜 변경
+	toDay.setYear(2018);
+	toDay.setMonth(3);
+	document.write("toDay.toLocaleString()="+toDay.toLocaleString());
+
+	document.write("</h3>");
+	</script>
+ </head>
+ <body>
+  
+ </body>
+</html>
