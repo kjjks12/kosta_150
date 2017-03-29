@@ -1,0 +1,44 @@
+<!doctype html>
+<html >
+ <head> 
+  <title>목차만들기</title>
+  <style>
+    ol{
+	  /*disc circle square upper-roman lower-roman 
+	     upper-alpha lower-alpha decimal */
+	  list-style-type:disc;
+	  list-style-image: url("img/live.jpg") ;
+	  list-style-position:inside;/*outside | inside */
+	}
+
+	ol ul{
+	list-style:url("img/checkBox1.png") inside;
+	}
+  </style>
+ </head>
+ <body>
+ <h2>순서있는 목차 </h2>
+ <!-- type="A , a , I , i , 숫자 " -->
+  <OL>
+    <li>쌍용자동차</li>
+	  <ul>
+         <li>티볼리</li>
+		 <li>코란도C</li>
+	  </ul>
+	<li>기아자동차</li>
+	<li>삼성자동차</li>
+	<li>현대자동차</li>
+  </OL>
+
+ <hr>
+
+ <h2>순서없는 목차</h2>
+ <!-- type="disc | circle | square " -->
+  <UL>
+    <li>쌍용자동차</li>
+	<li>기아자동차</li>
+	<li>삼성자동차</li>
+	<li>현대자동차</li>
+  </UL>
+ </body>
+</html>

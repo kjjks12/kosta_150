@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+ 
+  <title>Document</title>
+  <style>
+     div{width:200px;height:100px ; margin:10px}
+
+      /*inline요소는 width,height 적용안됨.
+	                 margin은 좌우는되지만, 상하는 적용안됨.
+	  */
+	 span{width:200px;height:100px;}
+	 #a{margin-left:20px;
+	    margin-right:10px;
+		margin-top:30px;
+		margin-bottom:20px}
+
+  </style>
+ </head>
+ <body>
+<span style="background:red" id="a">inline요소 - 개행이 안되는 요소. </span>
+<span style="background:blue">난 어디에 놓일까??</span>
+
+<hr>
+
+ <div style="background:red">block요소 - 자동개행이 되는 요소</div>
+ <div style="background:blue">난어디에 놓일까???</div>
+  
+ </body>
+</html>

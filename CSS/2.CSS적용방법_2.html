@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Document</title>
+  <style type="text/css">
+     /* 여기는 CSS 영역입니다.
+	    selector{속성:value ; ......}
+	 */
+
+     /*1. 태그이름으로 적용하기*/
+     h1,h2{color:red ; font-family:궁서체}
+	 h2{text-decoration:underline}
+
+	 /*2. class이름으로 적용하기*/
+	 .a{border:solid 5px pink}
+	 .b{font-style:italic}
+  
+    /*3. id이름으로 적용하기*/
+	 #a{border:double orange 10px}
+	 #b{background-color:yellow}
+
+	 /*4. */
+	 *{color:red}
+
+	 /*5. div태그내에 class가 test인경우*/
+	 div.test{width:400px;height:50px;background-color:green}
+
+	 /*6. div태그내에 id가 test인경우*/
+	 div#test{border:3px dotted #cc00ff}
+
+	 /*7.자식 요소 찾기
+	    - 부모 > 자식 : 부모를 기준으로 바로 하위 자식노드 찾기 
+		- 부모  자식  : 부모를 기주으로 모든 하위 자식노드 찾기
+	 */
+     div > p{background-color:skyblue}
+
+	 input{width:150px; height:30px;border:1px gray solid}
+
+	 input[name=name]{font-size:40px}
+
+  </style>
+ </head>
+ <body>
+ <!-- class는 중복가능하지만 id는 중복안된다.-->
+  <h1 id="a">오늘은 CSS배우는 날~~~</h1>
+  <h2 class="b" id="a">점심은 뭘 먹을까요????</h2>
+  <h1 class="a b">날씨는 좋은데..공부는 해야하고...</h1>
+  <hr>
+  
+  <div class="test">div태그 첫번째!!!</div>
+  <div id="test">div태그 두번째!!!</div>
+  <div>div태그 세번째!!!</div>
+
+  <hr color="red">
+
+<h1>Welcome to My Homepage</h1>
+
+<div>
+  <h2>My name is Donald</h2>
+  <p>I live in Duckburg.</p>
+</div>
+
+<div>
+  <span><p>I will not be styled.</p></span>
+</div>
+
+<p>My best friend is Mickey.</p>
+
+<hr>
+
+<form>
+  아이디 : <input type="text" name="id"><br>
+  이름 : <input type="text" name="name"><br>
+  비번 : <input type="password" name="pwd"><br>
+</form>
+  
+
+
+ </body>
+</html>

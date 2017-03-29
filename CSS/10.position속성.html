@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Document</title>
+  <style>
+    div{width:300px; height:100px}
+
+	 div:nth-child(1){
+	    background:red; 
+	 }
+
+	 div:nth-child(2){
+	    background:green; 
+		left:100px; top:50px;
+		position:relative ;/*absolute relative fixed static*/
+		z-index:1;
+	 }
+     /*
+	   z-index는 position이 지정되었을때 layer가 겹쳐 있을 경우
+	   z-index값을 높히면 높은 요소가 위로 올라오게된다.
+	 */
+	 div:nth-child(3){
+	    background:blue; 
+		position:absolute;
+		left:50px;top:200px;
+		z-index:2;
+	 }
+
+	 h3{
+	   width:150px;height:200px;
+	   border:dashed red 5px; 
+	   border-radius:15px;
+	   position:fixed; top:10px; right:10px;
+	 }
+  </style>
+ </head>
+ <body>
+  <div>1.첫번째 div</div>
+  <div>2.두번째 div</div>
+  <div>3.세번째 div</div>
+  <h3>오늘 본 상품입니다.</h3>
+
+  오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>오늘도 열심히<p>
+ </body>
+</html>
